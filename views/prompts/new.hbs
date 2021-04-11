@@ -1,0 +1,24 @@
+<div class="panel">
+  <h2>New Sprite Object</h2>
+  <form id='form_new' onsubmit="app.createColliderObject(event)">
+  <div class="content">
+    <div class="flex">
+      <div class="flex">
+        <p>Cell Width</p>
+        <input type="text" name="width" value="" pattern='[0-9]{1,4}' autocomplete="off" required onchange = 'preview.updatePreview( );'>
+      </div>
+      <div class="flex">
+        <p>Cell Height</p>
+        <input type="text" name="height" value="" pattern='[0-9]{1,4}' autocomplete="off" required onchange = 'preview.updatePreview( );'>
+      </div>
+    </div>
+    <input type="File" name="file" value="" autocomplete="off" onchange = "preview.onChangeFile(event);" required>
+    <div class="preview">
+      <img id='preview_source' src="" alt="">
+      <canvas id="preview_grid"></canvas>
+    </div>
+    <p id='imageDetail'></p>
+    <button type="submit" name="button">import</button>
+  </div>
+  </form>
+</div>

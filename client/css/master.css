@@ -1,0 +1,161 @@
+@import "/client/css/reset.css";
+@import "/client/css/base.css";
+
+canvas.editor {
+  background: #606060;
+  background-image: linear-gradient(45deg, #A0A0A0 25%, transparent 25%), linear-gradient(-45deg, #A0A0A0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #A0A0A0 75%), linear-gradient(-45deg, transparent 75%, #A0A0A0 75%);
+  background-size: 32px 32px;
+  background-position: 0 0, 0 16px, 16px -16px, -16px 0px;
+}
+
+.app {
+  flex:1;
+}
+
+.flex {
+  display: flex;
+}
+
+.full { flex:1; }
+
+.workspace {
+  background: #101010;
+  flex:1;
+  flex-flow: column nowrap;
+}
+
+div.editor {
+  flex:1;
+  background: #151515;
+  display: flex; flex-flow: column nowrap;
+}
+
+div.editor canvas, div.editor svg {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div.editor .view {
+  flex:1; position: relative;
+  overflow: auto;
+}
+
+.tools {
+  width: 400px;
+  border-top: 1px solid #222;
+  display: flex;
+}
+
+.tool_selection {
+  width: 60px;
+  position: relative;
+  border-right: 1px solid #222;
+  padding: 2px;
+}
+
+.tool_selection .entry {
+  position: relative;
+  padding: 5px;
+}
+
+.entry h2 {
+  text-align: center;
+  background: inherit;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.entry:hover h2 {
+  background: rgba(0,0,200,0.15);
+}
+
+.rect {
+  border: 2px solid transparent;
+}
+
+.rect.green {
+  border-color: #0F0;
+  background-color: rgba(200,255,200, 0.5);
+}
+
+.rect.blue {
+  border-color: #00F;
+  background-color: rgba(200,200,255, 0.5);
+}
+
+.rect.red {
+  border-color: #F00;
+  background-color: rgba(255,200,200, 0.5);
+}
+
+.tooltip { position:  relative }
+
+.tooltip_text {
+  position: absolute;
+  background: #FFD;
+  color: #222;
+  border-radius: 5px;
+  padding: 8px;
+  opacity: 0;
+  transition: opacity ease-in-out 0.25s;
+  width: 60px;
+}
+
+.tooltip:hover .tooltip_text {
+  opacity: 1;
+}
+
+.tooltip_text.leftside {
+   position: absolute; right: 100%; top:0;
+ }
+ .tooltip_text.leftside::after {
+   content: " ";
+   position: absolute;
+   left: 100%;
+   top: 50%;
+   margin-top: -5px;
+   border-width: 5px;
+   border-style: solid;
+   border-color: transparent transparent transparent #FFD ;
+ }
+
+.panel { background: #444; position: relative; border: 1px solid #222; }
+.panel .header { background: #333; }
+.panel h4 {  background: #4F4F4F; min-width: 100px; }
+
+.rail { height: 250px; }
+
+.interface {
+  display: flex;
+  flex-flow: column nowrap;
+  flex:1;
+  overflow-y: auto;
+}
+
+.interface .panel {
+  border-bottom: 1px solid #222;
+}
+
+.panel .content {
+  padding: 8px;
+}
+
+.panel .content * {
+  margin: 2px;
+}
+
+.panel .content > .list {
+  margin-top: 8px;
+  height: 200px;
+  overflow-y: auto;
+  border: 1px solid #222;
+  background: #333;
+}
+
+
+#keyframes {
+  flex:1;
+  overflow: auto;
+}

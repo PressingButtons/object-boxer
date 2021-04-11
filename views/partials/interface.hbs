@@ -1,0 +1,80 @@
+<div class="interface">
+  <!-- dimensions -->
+  <div class="panel">
+    <div class="header flex">
+      <h4>Properites</h4>
+    </div>
+
+    <div class="content">
+      <div class="flex">
+        <p>Width(px)</p>
+        <input type="text" name="cellWidth" value="" pattern="[0-9]{1,5}" autocomplete="off" onchange='updateCellDimensions();'>
+      </div>
+
+      <div class="flex">
+        <p>Height(px)</p>
+        <input type="text" name="cellHeight" value="" pattern="[0-9]{1,5}" autocomplete="off" onchange="updateCellDimensions();">
+      </div>
+    </div>
+  </div>
+
+  <!-- image -->
+  <div class="panel">
+    <div class="header flex">
+      <h4>Image Ref</h4>
+    </div>
+
+    <div class="content">
+      <p>Image Reference</p>
+      <input type='file' name='refImage' value="" autocomplete="off" onchange='loadReferenceImage(event);'>
+    </div>
+  </div>
+
+  <!-- frame information -->
+  <div class="panel">
+    <div class="header flex">
+      <h4>Frame Data</h4>
+    </div>
+    <div class="content">
+      <div class="flex">
+        <p>Frame Index</p>
+        <p id='frame_index'>-1</p>
+      </div>
+      <div class="flex">
+        <p>Frame Interval</p>
+        <p id='frame_interval'>0ms</p>
+      </div>
+      <div class="flex">
+        <p>Frame Coordinates</p>
+        <p id='frame_coordinates'>{0,0,0,0}</p>
+      </div>
+      <h4>Frame Boxes</h4>
+      <div class="list" id="frame_boxes"></div>
+      <h4>Frame Script</h4>
+      <button type="button" name="button">View Script</button>
+    </div>
+  </div>
+
+  <!-- Animation list -->
+  <div class="panel">
+    <div class="header flex">
+      <h4>Animations</h4>
+    </div>
+    <div class="content">
+      <div class="list" id='animation_list'>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Frames -->
+  <div class="panel full">
+    <div class="header flex">
+      <h4>
+        Key Frames
+      </h4>
+    </div>
+    <div class="content" id='keyframes'></div>
+  </div>
+
+</div>
